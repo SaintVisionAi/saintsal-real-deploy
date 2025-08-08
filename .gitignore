@@ -1,0 +1,12 @@
+# node / build
+node_modules/
+.next/
+dist/
+build/
+# env
+.env*
+# Replit/IDE cruft
+.replit
+.local/
+# macOS
+.DS_Store

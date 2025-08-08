@@ -1,0 +1,326 @@
+/* Import Inter font first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --card: hsl(20, 14.3%, 4.1%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(47, 96%, 53%);
+  --primary-foreground: hsl(20, 14.3%, 4.1%);
+  --secondary: hsl(12, 6.5%, 15.1%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --muted: hsl(12, 6.5%, 15.1%);
+  --muted-foreground: hsl(24, 5.4%, 63.9%);
+  --accent: hsl(12, 6.5%, 15.1%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(12, 6.5%, 15.1%);
+  --input: hsl(12, 6.5%, 15.1%);
+  --ring: hsl(47, 96%, 53%);
+  --chart-1: hsl(47, 96%, 53%);
+  --chart-2: hsl(159.7826, 100%, 36.0784%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(20, 14.3%, 4.1%);
+  --sidebar-foreground: hsl(0, 0%, 95%);
+  --sidebar-primary: hsl(47, 96%, 53%);
+  --sidebar-primary-foreground: hsl(20, 14.3%, 4.1%);
+  --sidebar-accent: hsl(12, 6.5%, 15.1%);
+  --sidebar-accent-foreground: hsl(0, 0%, 98%);
+  --sidebar-border: hsl(12, 6.5%, 15.1%);
+  --sidebar-ring: hsl(47, 96%, 53%);
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.5rem;
+  
+  /* SaintVisionAI Custom Properties */
+  --saint-gold: hsl(47, 96%, 53%);
+  --saint-gold-light: hsl(51, 100%, 50%);
+  --saint-black: hsl(0, 0%, 0%);
+  --saint-charcoal: hsl(20, 14.3%, 4.1%);
+  --saint-gray: hsl(12, 6.5%, 15.1%);
+  
+  /* Neon Colors */
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff0080;
+  --neon-green: #00ff88;
+  --neon-purple: #8000ff;
+  --neon-orange: #ff8000;
+  --neon-blue: #0080ff;
+  --neon-red: #ff3333;
+  --light-sky-blue: #87ceeb;
+}
+
+.dark {
+  --background: hsl(0, 0%, 0%);
+  --foreground: hsl(0, 0%, 100%);
+  --card: hsl(20, 14.3%, 4.1%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(47, 96%, 53%);
+  --primary-foreground: hsl(20, 14.3%, 4.1%);
+  --secondary: hsl(12, 6.5%, 15.1%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --muted: hsl(12, 6.5%, 15.1%);
+  --muted-foreground: hsl(24, 5.4%, 63.9%);
+  --accent: hsl(12, 6.5%, 15.1%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(12, 6.5%, 15.1%);
+  --input: hsl(12, 6.5%, 15.1%);
+  --ring: hsl(47, 96%, 53%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    /* Mobile optimizations */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(26, 26, 26, 0.8);
+    border: 1px solid hsl(47, 96%, 53%, 0.2);
+  }
+  
+  .gold-glow {
+    box-shadow: 0 0 20px hsl(47, 96%, 53%, 0.3);
+  }
+  
+  .slide-transition {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .typing-indicator {
+    animation: pulse 1.5s infinite;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, hsl(47, 96%, 53%), hsl(51, 100%, 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .saint-gold {
+    color: hsl(47, 96%, 53%);
+  }
+  
+  .saint-gold-bg {
+    background-color: hsl(47, 96%, 53%);
+  }
+  
+  .saint-black {
+    color: hsl(0, 0%, 0%);
+  }
+  
+  .saint-black-bg {
+    background-color: hsl(0, 0%, 0%);
+  }
+  
+  .saint-charcoal {
+    color: hsl(20, 14.3%, 4.1%);
+  }
+  
+  .saint-charcoal-bg {
+    background-color: hsl(20, 14.3%, 4.1%);
+  }
+  
+  /* Neon Text Effects */
+  .neon-cyan {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px var(--neon-cyan);
+    font-weight: 600;
+  }
+  
+  .neon-pink {
+    color: var(--neon-pink);
+    text-shadow: 0 0 8px var(--neon-pink);
+    font-weight: 600;
+  }
+  
+  .neon-green {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--neon-green);
+    font-weight: 600;
+  }
+  
+  .neon-purple {
+    color: var(--neon-purple);
+    text-shadow: 0 0 8px var(--neon-purple);
+    font-weight: 600;
+  }
+  
+  .neon-gold {
+    color: var(--saint-gold);
+    text-shadow: 0 0 8px var(--saint-gold);
+    font-weight: 600;
+  }
+  
+  .text-blue {
+    color: var(--neon-blue);
+    text-shadow: 0 0 8px var(--neon-blue);
+    font-weight: 600;
+  }
+  
+  .text-green {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--neon-green);
+    font-weight: 600;
+  }
+  
+  .text-purple {
+    color: var(--neon-purple);
+    text-shadow: 0 0 8px var(--neon-purple);
+    font-weight: 600;
+  }
+  
+  .text-red {
+    color: var(--neon-red);
+    text-shadow: 0 0 8px var(--neon-red);
+    font-weight: 600;
+  }
+  
+  .text-light-sky-blue {
+    color: var(--light-sky-blue);
+    text-shadow: 0 0 8px var(--light-sky-blue);
+    font-weight: 600;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.5; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+}
+
+/* Clean up old import remnant */
+
+/* Glassmorphism and Premium Effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-text {
+  color: #00ff88;
+  text-shadow: 0 0 2px #00ff88;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37, #f4d03f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ensure proper font loading */
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Mobile PWA Optimizations */
+@media (max-width: 768px) {
+  /* Mobile safe area support */
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Prevent zoom on input focus */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+  
+  /* Touch-friendly button sizes */
+  button, .button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent text size adjustment */
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+}
+
+/* PWA specific styles */
+@media (display-mode: standalone) {
+  /* Hide browser UI when installed as PWA */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Adjust header for PWA */
+  header {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .saint-gold {
+    color: #ffff00;
+  }
+  
+  .text-white\/80 {
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode enhancements for mobile */
+@media (prefers-color-scheme: dark) {
+  /* Ensure good contrast on mobile */
+  .glass-effect {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(20px);
+  }
+}
